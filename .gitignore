@@ -1,0 +1,14 @@
+# 谁都不该进仓库的东西
+node_modules/
+out/
+*.log
+*.tmp
+.tmp-*
+*.bak-*
+.env
+.DS_Store
+Thumbs.db
+
+# 测试产物
+test/.tmp/
+coverage/

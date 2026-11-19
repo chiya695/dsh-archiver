@@ -1,0 +1,59 @@
+{
+  "name": "dsh-archiver",
+  "version": "0.2.0",
+  "description": "DSH 技能/插件归档器：把每一个技能、每一个插件各自打成 zip，落地本地目录并可同步到 WebDAV；设置页里手动/自动分开配置，支持定时与 DSH 启动时自动归档，也能把备份一键导入回来。Back up every skill and plugin in DeepSeek Harness as separate zips — manual, scheduled or on startup — to disk or WebDAV, and import them back.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "backup",
+    "archive",
+    "zip",
+    "webdav",
+    "skill"
+  ],
+  "author": {
+    "name": "Chiya",
+    "url": "https://github.com/chiya695"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiya695/dsh-archiver.git"
+  },
+  "homepage": "https://github.com/chiya695/dsh-archiver#readme",
+  "bugs": {
+    "url": "https://github.com/chiya695/dsh-archiver/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./server": "./lib/run.mjs",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-archiver": "bin/dsh-archiver.mjs"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "client.js",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
